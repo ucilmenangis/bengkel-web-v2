@@ -91,9 +91,9 @@ export default function Testimonials() {
         <StaggerContainer className="mt-16 flex flex-wrap items-center justify-center gap-12 border-t border-surface-container pt-12">
           {brands.map(({ Icon, label }) => (
             <StaggerItem key={label}>
-              <div className="flex items-center gap-2 text-surface-dim">
-                <Icon size={24} />
-                <span className="font-heading text-sm font-medium uppercase tracking-wider">
+              <div className="flex items-center gap-3 text-on-surface-variant-strong">
+                <Icon size={40} />
+                <span className="font-heading text-base font-medium uppercase tracking-wider">
                   {label}
                 </span>
               </div>

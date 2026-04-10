@@ -3,7 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import type { ReactNode } from "react";
 
-const EASE_OUT = [0.25, 0.1, 0.25, 1.0] as const;
+export const EASE_OUT = [0.25, 0.1, 0.25, 1.0] as const;
 
 const viewVariants = {
   hidden: { opacity: 0, y: 24 },

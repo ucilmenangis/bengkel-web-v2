@@ -1,4 +1,5 @@
-import { FadeIn, StaggerContainer, StaggerItem } from "@/components/animations";
+import { FadeIn } from "@/components/animations";
+import WorkshopImages from "@/components/WorkshopImages";
 
 export default function Workshop() {
   return (
@@ -6,26 +7,7 @@ export default function Workshop() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
           {/* Image grid */}
-          <StaggerContainer className="grid grid-cols-2 gap-3">
-            <StaggerItem>
-              <div className="overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=500&h=600&fit=crop"
-                  alt="Ruang kerja bengkel"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            </StaggerItem>
-            <StaggerItem>
-              <div className="mt-8 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=500&h=600&fit=crop"
-                  alt="Peralatan diagnostik"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            </StaggerItem>
-          </StaggerContainer>
+          <WorkshopImages />
 
           {/* Content */}
           <FadeIn delay={0.15}>

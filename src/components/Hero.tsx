@@ -4,6 +4,7 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/animations";
+import StatCounter from "@/components/StatCounter";
 
 const stats = [
   { number: "15+", label: "Tahun Pengalaman" },
@@ -82,7 +83,7 @@ export default function Hero() {
                   }
                 >
                   <span className="block font-heading text-3xl font-black text-primary-container lg:text-4xl">
-                    {stat.number}
+                    <StatCounter value={stat.number} />
                   </span>
                   <span className="mt-2 block font-heading text-[10px] font-medium uppercase tracking-wider text-on-primary/50 lg:text-xs">
                     {stat.label}
