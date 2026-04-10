@@ -35,24 +35,6 @@ export default function Workshop() {
               Fasilitas modern kami dilengkapi dengan alat diagnostik terbaru
               dan lingkungan kerja yang bersih demi standar kualitas tertinggi.
             </p>
-
-            <div className="mt-10 grid grid-cols-2 gap-8">
-              {[
-                { number: "15+", label: "Tahun Pengalaman" },
-                { number: "3K+", label: "Kendaraan Ditangani" },
-                { number: "100%", label: "Suku Cadang OEM" },
-                { number: "24/7", label: "Dukungan Teknis" },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <span className="font-heading text-3xl font-black text-primary">
-                    {stat.number}
-                  </span>
-                  <p className="mt-1 font-heading text-xs font-medium uppercase tracking-wider text-on-surface-variant">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
