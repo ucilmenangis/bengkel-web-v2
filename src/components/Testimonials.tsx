@@ -56,19 +56,19 @@ export default function Testimonials() {
               className="bg-surface-container-low p-8"
             >
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-primary/10 text-primary">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-primary/10 text-primary">
                   {t.icon}
                 </div>
                 <div>
                   <StarRating />
-                  <blockquote className="mt-4 text-sm leading-relaxed text-on-surface-variant">
+                  <blockquote className="mt-4 text-base leading-relaxed text-on-surface-variant-strong">
                     &ldquo;{t.text}&rdquo;
                   </blockquote>
                   <div className="mt-6">
-                    <span className="block font-heading text-sm font-bold text-on-surface">
+                    <span className="block font-heading text-xs text-on-surface/70">
                       {t.author}
                     </span>
-                    <span className="block font-heading text-[10px] font-medium uppercase tracking-wider text-on-surface-variant">
+                    <span className="block font-heading text-[10px] font-medium uppercase tracking-wider text-on-surface/50">
                       {t.role}
                     </span>
                   </div>

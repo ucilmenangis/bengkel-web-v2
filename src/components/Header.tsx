@@ -26,7 +26,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="font-heading text-xs font-medium uppercase tracking-widest text-on-surface-variant transition-colors hover:text-primary"
+              className="font-heading text-xs font-medium uppercase tracking-widest text-on-surface-variant-strong transition-colors hover:text-primary"
             >
               {link.label}
             </a>
@@ -63,7 +63,7 @@ export default function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="block py-3 font-heading text-sm font-medium uppercase tracking-widest text-on-surface-variant"
+              className="block py-3 font-heading text-sm font-medium uppercase tracking-widest text-on-surface-variant-strong"
             >
               {link.label}
             </a>

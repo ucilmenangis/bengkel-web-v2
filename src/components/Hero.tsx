@@ -50,7 +50,7 @@ export default function Hero() {
                 href="#komponen"
                 className="border border-on-primary/30 px-8 py-3 font-heading text-sm font-semibold uppercase tracking-widest text-on-primary transition-colors hover:border-on-primary hover:bg-on-primary/10"
               >
-                Komponen
+                Jelajahi Produk
               </a>
             </div>
           </div>

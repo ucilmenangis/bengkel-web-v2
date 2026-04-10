@@ -28,6 +28,7 @@ export default function Marketplace() {
           <a
             href="#"
             className="border border-on-primary/40 bg-on-primary/10 px-8 py-4 transition-colors hover:bg-on-primary"
+            title="Belanja di Tokopedia"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/logo-tokopedia.png" alt="Tokopedia" className="h-8 w-auto" />
@@ -35,6 +36,7 @@ export default function Marketplace() {
           <a
             href="#"
             className="border border-on-primary/40 bg-on-primary/10 px-8 py-4 transition-colors hover:bg-on-primary"
+            title="Belanja di Shopee"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/shopee.png" alt="Shopee" className="h-8 w-auto" />

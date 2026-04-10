@@ -31,10 +31,16 @@ export default function Workshop() {
               <br />
               BENGKEL
             </h2>
-            <p className="mt-6 max-w-md text-sm leading-relaxed text-on-surface-variant">
+            <p className="mt-6 max-w-md text-sm leading-relaxed text-on-surface-variant-strong">
               Fasilitas modern kami dilengkapi dengan alat diagnostik terbaru
               dan lingkungan kerja yang bersih demi standar kualitas tertinggi.
             </p>
+            <a
+              href="#kontak"
+              className="mt-8 inline-block bg-primary px-5 py-2 font-heading text-xs font-semibold uppercase tracking-widest text-on-primary transition-colors hover:bg-primary-container"
+            >
+              Jadwalkan Kunjungan
+            </a>
           </div>
         </div>
       </div>

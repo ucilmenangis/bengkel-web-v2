@@ -46,7 +46,7 @@ export default function Services() {
         <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-on-surface md:text-4xl lg:text-5xl">
           LAYANAN UTAMA KAMI
         </h2>
-        <p className="mt-4 max-w-xl text-sm leading-relaxed text-on-surface-variant">
+        <p className="mt-4 max-w-xl text-sm leading-relaxed text-on-surface-variant-strong">
           Keahlian mendalam dalam setiap aspek perawatan dan peningkatan
           performa kendaraan modern.
         </p>
@@ -55,7 +55,7 @@ export default function Services() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="bg-surface-container-lowest p-8"
+              className="flex flex-col bg-surface-container-lowest p-8"
             >
               <div className="flex h-12 w-12 items-center justify-center bg-primary/10 text-primary">
                 {service.icon}
@@ -63,7 +63,7 @@ export default function Services() {
               <h3 className="mt-6 font-heading text-lg font-bold tracking-tight text-on-surface">
                 {service.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-on-surface-variant">
+              <p className="mt-3 text-sm leading-relaxed text-on-surface-variant-strong">
                 {service.description}
               </p>
               <ul className="mt-6 space-y-2">
@@ -77,6 +77,12 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
+              <a
+                href="#layanan"
+                className="mt-auto pt-6 font-heading text-xs font-semibold uppercase tracking-wider text-primary transition-colors hover:text-primary-container"
+              >
+                Pelajari Lebih Lanjut &rarr;
+              </a>
             </div>
           ))}
         </div>

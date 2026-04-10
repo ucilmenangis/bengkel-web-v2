@@ -28,7 +28,7 @@ export default function Footer() {
             <span className="font-heading text-xl font-bold tracking-tight text-inverse-on-surface">
               MODULAR<span className="text-primary-container">.</span>AUTO
             </span>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-inverse-on-surface/60">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-inverse-on-surface/80">
               Bengkel otomotif premium dengan spesialisasi tuning performa dan
               perawatan kendaraan modern.
             </p>
@@ -45,7 +45,7 @@ export default function Footer() {
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-sm text-inverse-on-surface/50 transition-colors hover:text-inverse-on-surface"
+                      className="text-sm text-inverse-on-surface/80 transition-colors hover:text-inverse-on-surface"
                     >
                       {link}
                     </a>
@@ -57,7 +57,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 border-t border-on-surface/10 pt-8">
-          <p className="text-xs text-inverse-on-surface/40">
+          <p className="text-xs text-inverse-on-surface/70">
             &copy; {new Date().getFullYear()} Modular Auto. Seluruh hak cipta dilindungi.
           </p>
         </div>

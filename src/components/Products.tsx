@@ -84,15 +84,15 @@ export default function Products() {
                 <h3 className="font-heading text-base font-bold tracking-tight text-on-surface">
                   {product.name}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">
+                <p className="mt-2 text-sm leading-relaxed text-on-surface-variant-strong">
                   {product.description}
                 </p>
                 <div className="mt-4 flex items-center justify-between">
                   <span className="font-heading text-xl font-black text-primary">
                     {product.price}
                   </span>
-                  <button className="bg-surface-container-highest px-4 py-2 font-heading text-xs font-semibold uppercase tracking-wider text-on-surface transition-colors hover:bg-primary hover:text-on-primary">
-                    Detail
+                  <button className="bg-surface-container-highest px-5 py-2 font-heading text-xs font-semibold uppercase tracking-wider text-on-surface transition-colors hover:bg-primary hover:text-on-primary">
+                    Lihat Spesifikasi
                   </button>
                 </div>
               </div>

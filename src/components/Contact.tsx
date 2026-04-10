@@ -15,14 +15,14 @@ export default function Contact() {
               <br />
               KUNJUNGAN ANDA.
             </h2>
-            <p className="mt-6 max-w-md text-sm leading-relaxed text-on-surface-variant">
+            <p className="mt-6 max-w-md text-sm leading-relaxed text-on-surface-variant-strong">
               Konsultasikan kebutuhan kendaraan Anda dengan tim teknisi kami.
               Kami siap memberikan solusi terbaik.
             </p>
 
             <div className="mt-10 space-y-6">
               <div>
-                <span className="font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
+                <span className="font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant-strong">
                   Alamat
                 </span>
                 <p className="mt-1 text-sm text-on-surface">
@@ -30,13 +30,13 @@ export default function Contact() {
                 </p>
               </div>
               <div>
-                <span className="font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
+                <span className="font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant-strong">
                   Telepon
                 </span>
                 <p className="mt-1 text-sm text-on-surface">+62 21 5555 8888</p>
               </div>
               <div>
-                <span className="font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
+                <span className="font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant-strong">
                   Jam Operasional
                 </span>
                 <p className="mt-1 text-sm text-on-surface">
@@ -51,22 +51,22 @@ export default function Contact() {
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div>
-                  <label className="block font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
+                  <label className="block font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant-strong">
                     Nama
                   </label>
                   <input
                     type="text"
-                    className="mt-2 w-full border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-colors focus:border-primary"
+                    className="mt-2 w-full border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-all focus:border-primary focus:bg-primary/5"
                     placeholder="Nama lengkap"
                   />
                 </div>
                 <div>
-                  <label className="block font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
+                  <label className="block font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant-strong">
                     Email
                   </label>
                   <input
                     type="email"
-                    className="mt-2 w-full border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-colors focus:border-primary"
+                    className="mt-2 w-full border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-all focus:border-primary focus:bg-primary/5"
                     placeholder="email@contoh.com"
                   />
                 </div>
@@ -77,7 +77,7 @@ export default function Contact() {
                 </label>
                 <input
                   type="text"
-                  className="mt-2 w-full border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-colors focus:border-primary"
+                  className="mt-2 w-full border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-all focus:border-primary focus:bg-primary/5"
                   placeholder="Merk, model, dan tahun"
                 />
               </div>
@@ -85,7 +85,7 @@ export default function Contact() {
                 <label className="block font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
                   Layanan
                 </label>
-                <select className="mt-2 w-full border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-colors focus:border-primary">
+                <select className="mt-2 w-full border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-all focus:border-primary focus:bg-primary/5">
                   <option>Perawatan Umum</option>
                   <option>Tuning Performa</option>
                   <option>Diagnostik Lanjutan</option>
@@ -98,7 +98,7 @@ export default function Contact() {
                 </label>
                 <textarea
                   rows={4}
-                  className="mt-2 w-full resize-none border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-colors focus:border-primary"
+                  className="mt-2 w-full resize-none border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-all focus:border-primary focus:bg-primary/5"
                   placeholder="Deskripsikan kebutuhan Anda..."
                 />
               </div>
