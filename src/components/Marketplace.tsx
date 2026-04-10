@@ -24,18 +24,20 @@ export default function Marketplace() {
           Dapatkan kemudahan transaksi dengan cicilan 0% dan jaminan keaslian
           suku cadang melalui platform belanja favorit Anda.
         </p>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-6">
           <a
             href="#"
-            className="border border-on-primary/40 bg-on-primary/10 px-8 py-3 font-heading text-sm font-semibold uppercase tracking-widest text-on-primary transition-colors hover:bg-on-primary hover:text-primary"
+            className="border border-on-primary/40 bg-on-primary/10 px-8 py-4 transition-colors hover:bg-on-primary"
           >
-            Tokopedia
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-tokopedia.png" alt="Tokopedia" className="h-8 w-auto" />
           </a>
           <a
             href="#"
-            className="border border-on-primary/40 bg-on-primary/10 px-8 py-3 font-heading text-sm font-semibold uppercase tracking-widest text-on-primary transition-colors hover:bg-on-primary hover:text-primary"
+            className="border border-on-primary/40 bg-on-primary/10 px-8 py-4 transition-colors hover:bg-on-primary"
           >
-            Shopee
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/shopee.png" alt="Shopee" className="h-8 w-auto" />
           </a>
         </div>
       </div>
