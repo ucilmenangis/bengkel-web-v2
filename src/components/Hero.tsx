@@ -70,29 +70,27 @@ export default function Hero() {
             </SequenceItem>
           </AnimateSequence>
 
-          {/* Key stats */}
-          <div className="hidden lg:grid lg:grid-cols-2 lg:gap-4">
-            <StaggerContainer className="contents">
-              {stats.map((stat, i) => (
-                <StaggerItem key={stat.label}>
-                  <div
-                    className={
-                      i % 2 === 0
-                        ? "border border-on-primary/15 bg-on-primary/5 p-8"
-                        : "border border-primary/30 bg-primary/10 p-8"
-                    }
-                  >
-                    <span className="block font-heading text-4xl font-black text-primary-container">
-                      {stat.number}
-                    </span>
-                    <span className="mt-2 block font-heading text-xs font-medium uppercase tracking-wider text-on-primary/50">
-                      {stat.label}
-                    </span>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
-          </div>
+          {/* Key stats — visible on all screens */}
+          <StaggerContainer className="grid grid-cols-2 gap-4 lg:grid-cols-2">
+            {stats.map((stat, i) => (
+              <StaggerItem key={stat.label}>
+                <div
+                  className={
+                    i % 2 === 0
+                      ? "border border-on-primary/15 bg-on-primary/5 p-6 lg:p-8"
+                      : "border border-primary/30 bg-primary/10 p-6 lg:p-8"
+                  }
+                >
+                  <span className="block font-heading text-3xl font-black text-primary-container lg:text-4xl">
+                    {stat.number}
+                  </span>
+                  <span className="mt-2 block font-heading text-[10px] font-medium uppercase tracking-wider text-on-primary/50 lg:text-xs">
+                    {stat.label}
+                  </span>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
         </div>
       </div>
     </section>

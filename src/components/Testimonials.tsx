@@ -1,3 +1,4 @@
+import { SiBmw, SiPorsche, SiVolkswagen, SiAudi } from "@icons-pack/react-simple-icons";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/animations";
 
 const testimonials = [
@@ -26,7 +27,12 @@ const testimonials = [
   },
 ];
 
-const brands = ["BMW", "PORSCHE", "MERCEDES", "AUDI"];
+const brands = [
+  { Icon: SiBmw, label: "BMW" },
+  { Icon: SiPorsche, label: "Porsche" },
+  { Icon: SiVolkswagen, label: "Volkswagen" },
+  { Icon: SiAudi, label: "Audi" },
+];
 
 function StarRating() {
   return (
@@ -83,11 +89,14 @@ export default function Testimonials() {
 
         {/* Brand logos */}
         <StaggerContainer className="mt-16 flex flex-wrap items-center justify-center gap-12 border-t border-surface-container pt-12">
-          {brands.map((brand) => (
-            <StaggerItem key={brand}>
-              <span className="font-heading text-2xl font-bold tracking-wider text-surface-dim">
-                {brand}
-              </span>
+          {brands.map(({ Icon, label }) => (
+            <StaggerItem key={label}>
+              <div className="flex items-center gap-2 text-surface-dim">
+                <Icon size={24} />
+                <span className="font-heading text-sm font-medium uppercase tracking-wider">
+                  {label}
+                </span>
+              </div>
             </StaggerItem>
           ))}
         </StaggerContainer>
