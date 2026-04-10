@@ -1,3 +1,10 @@
+import {
+  AnimateSequence,
+  SequenceItem,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/animations";
+
 const stats = [
   { number: "15+", label: "Tahun Pengalaman" },
   { number: "3K+", label: "Kendaraan Ditangani" },
@@ -23,57 +30,68 @@ export default function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-20">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
           {/* Text content */}
-          <div>
-            <span className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-primary-container">
-              Keunggulan Teknik Tanpa Kompromi
-            </span>
-            <h1 className="mt-4 font-heading text-5xl font-black leading-[1.05] tracking-tight text-on-primary md:text-6xl lg:text-7xl">
-              REKAYASA
-              <br />
-              PRESISI
-              <br />
-              <span className="text-primary-container">TOTAL.</span>
-            </h1>
-            <p className="mt-6 max-w-lg text-base leading-relaxed text-on-primary/70">
-              Mendefinisikan ulang performa melalui layanan mekanis yang teliti.
-              Kami beroperasi di puncak standar otomotif untuk memastikan
-              kendaraan Anda melampaui batas kemampuannya.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="#layanan"
-                className="bg-primary px-8 py-3 font-heading text-sm font-semibold uppercase tracking-widest text-on-primary transition-colors hover:bg-primary-container"
-              >
-                Layanan Kami
-              </a>
-              <a
-                href="#komponen"
-                className="border border-on-primary/30 px-8 py-3 font-heading text-sm font-semibold uppercase tracking-widest text-on-primary transition-colors hover:border-on-primary hover:bg-on-primary/10"
-              >
-                Jelajahi Produk
-              </a>
-            </div>
-          </div>
+          <AnimateSequence>
+            <SequenceItem>
+              <span className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-primary-container">
+                Keunggulan Teknik Tanpa Kompromi
+              </span>
+            </SequenceItem>
+            <SequenceItem>
+              <h1 className="mt-4 font-heading text-5xl font-black leading-[1.05] tracking-tight text-on-primary md:text-6xl lg:text-7xl">
+                <span className="block">REKAYASA</span>
+                <span className="block">PRESISI</span>
+                <span className="block">
+                  <span className="text-primary-container">TOTAL.</span>
+                </span>
+              </h1>
+            </SequenceItem>
+            <SequenceItem>
+              <p className="mt-6 max-w-lg text-base leading-relaxed text-on-primary/70">
+                Mendefinisikan ulang performa melalui layanan mekanis yang
+                teliti. Kami beroperasi di puncak standar otomotif untuk
+                memastikan kendaraan Anda melampaui batas kemampuannya.
+              </p>
+            </SequenceItem>
+            <SequenceItem>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a
+                  href="#layanan"
+                  className="bg-primary px-8 py-3 font-heading text-sm font-semibold uppercase tracking-widest text-on-primary transition-colors hover:bg-primary-container"
+                >
+                  Layanan Kami
+                </a>
+                <a
+                  href="#komponen"
+                  className="border border-on-primary/30 px-8 py-3 font-heading text-sm font-semibold uppercase tracking-widest text-on-primary transition-colors hover:border-on-primary hover:bg-on-primary/10"
+                >
+                  Jelajahi Produk
+                </a>
+              </div>
+            </SequenceItem>
+          </AnimateSequence>
 
           {/* Key stats */}
           <div className="hidden lg:grid lg:grid-cols-2 lg:gap-4">
-            {stats.map((stat, i) => (
-              <div
-                key={stat.label}
-                className={
-                  i % 2 === 0
-                    ? "border border-on-primary/15 bg-on-primary/5 p-8"
-                    : "border border-primary/30 bg-primary/10 p-8"
-                }
-              >
-                <span className="block font-heading text-4xl font-black text-primary-container">
-                  {stat.number}
-                </span>
-                <span className="mt-2 block font-heading text-xs font-medium uppercase tracking-wider text-on-primary/50">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
+            <StaggerContainer className="contents">
+              {stats.map((stat, i) => (
+                <StaggerItem key={stat.label}>
+                  <div
+                    className={
+                      i % 2 === 0
+                        ? "border border-on-primary/15 bg-on-primary/5 p-8"
+                        : "border border-primary/30 bg-primary/10 p-8"
+                    }
+                  >
+                    <span className="block font-heading text-4xl font-black text-primary-container">
+                      {stat.number}
+                    </span>
+                    <span className="mt-2 block font-heading text-xs font-medium uppercase tracking-wider text-on-primary/50">
+                      {stat.label}
+                    </span>
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
           </div>
         </div>
       </div>

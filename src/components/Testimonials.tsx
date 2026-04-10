@@ -1,3 +1,5 @@
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/animations";
+
 const testimonials = [
   {
     icon: (
@@ -42,53 +44,53 @@ export default function Testimonials() {
   return (
     <section id="testimoni" className="bg-surface py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <span className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-          Reputasi Teruji
-        </span>
-        <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-on-surface md:text-4xl lg:text-5xl">
-          DIPERCAYA OLEH KOMUNITAS.
-        </h2>
+        <FadeIn>
+          <span className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-primary">
+            Reputasi Teruji
+          </span>
+          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-on-surface md:text-4xl lg:text-5xl">
+            DIPERCAYA OLEH KOMUNITAS.
+          </h2>
+        </FadeIn>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <StaggerContainer className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2">
           {testimonials.map((t) => (
-            <div
-              key={t.author}
-              className="bg-surface-container-low p-8"
-            >
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-primary/10 text-primary">
-                  {t.icon}
-                </div>
-                <div>
-                  <StarRating />
-                  <blockquote className="mt-4 text-base leading-relaxed text-on-surface-variant-strong">
-                    &ldquo;{t.text}&rdquo;
-                  </blockquote>
-                  <div className="mt-6">
-                    <span className="block font-heading text-xs text-on-surface/70">
-                      {t.author}
-                    </span>
-                    <span className="block font-heading text-[10px] font-medium uppercase tracking-wider text-on-surface/50">
-                      {t.role}
-                    </span>
+            <StaggerItem key={t.author}>
+              <div className="bg-surface-container-low p-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-primary/10 text-primary">
+                    {t.icon}
+                  </div>
+                  <div>
+                    <StarRating />
+                    <blockquote className="mt-4 text-base leading-relaxed text-on-surface-variant-strong">
+                      &ldquo;{t.text}&rdquo;
+                    </blockquote>
+                    <div className="mt-6">
+                      <span className="block font-heading text-xs text-on-surface/70">
+                        {t.author}
+                      </span>
+                      <span className="block font-heading text-[10px] font-medium uppercase tracking-wider text-on-surface/50">
+                        {t.role}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
 
         {/* Brand logos */}
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-12 border-t border-surface-container pt-12">
+        <StaggerContainer className="mt-16 flex flex-wrap items-center justify-center gap-12 border-t border-surface-container pt-12">
           {brands.map((brand) => (
-            <span
-              key={brand}
-              className="font-heading text-2xl font-bold tracking-wider text-surface-dim"
-            >
-              {brand}
-            </span>
+            <StaggerItem key={brand}>
+              <span className="font-heading text-2xl font-bold tracking-wider text-surface-dim">
+                {brand}
+              </span>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

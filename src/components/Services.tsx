@@ -1,3 +1,5 @@
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/animations";
+
 const services = [
   {
     icon: (
@@ -40,52 +42,53 @@ export default function Services() {
   return (
     <section id="layanan" className="bg-surface-container-low py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <span className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-          Spesialisasi Teknis
-        </span>
-        <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-on-surface md:text-4xl lg:text-5xl">
-          LAYANAN UTAMA KAMI
-        </h2>
-        <p className="mt-4 max-w-xl text-sm leading-relaxed text-on-surface-variant-strong">
-          Keahlian mendalam dalam setiap aspek perawatan dan peningkatan
-          performa kendaraan modern.
-        </p>
+        <FadeIn>
+          <span className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-primary">
+            Spesialisasi Teknis
+          </span>
+          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-on-surface md:text-4xl lg:text-5xl">
+            LAYANAN UTAMA KAMI
+          </h2>
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-on-surface-variant-strong">
+            Keahlian mendalam dalam setiap aspek perawatan dan peningkatan
+            performa kendaraan modern.
+          </p>
+        </FadeIn>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <StaggerContainer className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
           {services.map((service) => (
-            <div
-              key={service.title}
-              className="flex flex-col bg-surface-container-lowest p-8"
-            >
-              <div className="flex h-12 w-12 items-center justify-center bg-primary/10 text-primary">
-                {service.icon}
+            <StaggerItem key={service.title}>
+              <div className="flex h-full flex-col bg-surface-container-lowest p-8">
+                <div className="flex h-12 w-12 items-center justify-center bg-primary/10 text-primary">
+                  {service.icon}
+                </div>
+                <h3 className="mt-6 font-heading text-lg font-bold tracking-tight text-on-surface">
+                  {service.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-on-surface-variant-strong">
+                  {service.description}
+                </p>
+                <ul className="mt-6 space-y-2">
+                  {service.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="font-heading text-xs font-medium uppercase tracking-wider text-on-surface"
+                    >
+                      <span className="mr-2 text-primary">&mdash;</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="#layanan"
+                  className="mt-auto pt-6 font-heading text-xs font-semibold uppercase tracking-wider text-primary transition-colors hover:text-primary-container"
+                >
+                  Pelajari Lebih Lanjut &rarr;
+                </a>
               </div>
-              <h3 className="mt-6 font-heading text-lg font-bold tracking-tight text-on-surface">
-                {service.title}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-on-surface-variant-strong">
-                {service.description}
-              </p>
-              <ul className="mt-6 space-y-2">
-                {service.features.map((feature) => (
-                  <li
-                    key={feature}
-                    className="font-heading text-xs font-medium uppercase tracking-wider text-on-surface"
-                  >
-                    <span className="mr-2 text-primary">&mdash;</span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="#layanan"
-                className="mt-auto pt-6 font-heading text-xs font-semibold uppercase tracking-wider text-primary transition-colors hover:text-primary-container"
-              >
-                Pelajari Lebih Lanjut &rarr;
-              </a>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

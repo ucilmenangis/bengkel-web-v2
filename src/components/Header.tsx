@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const navLinks = [
   { label: "Layanan", href: "#layanan" },
@@ -56,27 +57,38 @@ export default function Header() {
       </div>
 
       {/* Mobile nav */}
-      {menuOpen && (
-        <nav className="border-t border-surface-container-highest bg-surface px-6 py-4 md:hidden">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              className="block py-3 font-heading text-sm font-medium uppercase tracking-widest text-on-surface-variant-strong"
-            >
-              {link.label}
-            </a>
-          ))}
-          <a
-            href="#kontak"
-            onClick={() => setMenuOpen(false)}
-            className="mt-2 inline-block bg-primary px-5 py-2 font-heading text-xs font-semibold uppercase tracking-widest text-on-primary"
+      <AnimatePresence initial={false}>
+        {menuOpen && (
+          <motion.nav
+            key="mobile-nav"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1.0] }}
+            className="overflow-hidden border-t border-surface-container-highest bg-surface md:hidden"
           >
-            Hubungi Kami
-          </a>
-        </nav>
-      )}
+            <div className="px-6 py-4">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="block py-3 font-heading text-sm font-medium uppercase tracking-widest text-on-surface-variant-strong"
+                >
+                  {link.label}
+                </a>
+              ))}
+              <a
+                href="#kontak"
+                onClick={() => setMenuOpen(false)}
+                className="mt-2 inline-block bg-primary px-5 py-2 font-heading text-xs font-semibold uppercase tracking-widest text-on-primary"
+              >
+                Hubungi Kami
+              </a>
+            </div>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

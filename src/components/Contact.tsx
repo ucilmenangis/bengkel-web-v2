@@ -1,12 +1,14 @@
 "use client";
 
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/animations";
+
 export default function Contact() {
   return (
     <section id="kontak" className="bg-surface-container py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           {/* Contact info */}
-          <div>
+          <FadeIn>
             <span className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-primary">
               Hubungi Kami
             </span>
@@ -44,64 +46,76 @@ export default function Contact() {
                 </p>
               </div>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Contact form */}
           <div className="bg-surface-container-low p-8">
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                <div>
-                  <label className="block font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant-strong">
-                    Nama
-                  </label>
-                  <input
-                    type="text"
-                    className="mt-2 w-full border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-all focus:border-primary focus:bg-primary/5"
-                    placeholder="Nama lengkap"
-                  />
-                </div>
-                <div>
-                  <label className="block font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant-strong">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    className="mt-2 w-full border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-all focus:border-primary focus:bg-primary/5"
-                    placeholder="email@contoh.com"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
-                  Kendaraan
-                </label>
-                <input
-                  type="text"
-                  className="mt-2 w-full border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-all focus:border-primary focus:bg-primary/5"
-                  placeholder="Merk, model, dan tahun"
-                />
-              </div>
-              <div>
-                <label className="block font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
-                  Layanan
-                </label>
-                <select className="mt-2 w-full border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-all focus:border-primary focus:bg-primary/5">
-                  <option>Perawatan Umum</option>
-                  <option>Tuning Performa</option>
-                  <option>Diagnostik Lanjutan</option>
-                  <option>Konsultasi</option>
-                </select>
-              </div>
-              <div>
-                <label className="block font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
-                  Pesan
-                </label>
-                <textarea
-                  rows={4}
-                  className="mt-2 w-full resize-none border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-all focus:border-primary focus:bg-primary/5"
-                  placeholder="Deskripsikan kebutuhan Anda..."
-                />
-              </div>
+              <StaggerContainer className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <StaggerItem>
+                  <div>
+                    <label className="block font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant-strong">
+                      Nama
+                    </label>
+                    <input
+                      type="text"
+                      className="mt-2 w-full border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-all focus:border-primary focus:bg-primary/5"
+                      placeholder="Nama lengkap"
+                    />
+                  </div>
+                </StaggerItem>
+                <StaggerItem>
+                  <div>
+                    <label className="block font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant-strong">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      className="mt-2 w-full border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-all focus:border-primary focus:bg-primary/5"
+                      placeholder="email@contoh.com"
+                    />
+                  </div>
+                </StaggerItem>
+              </StaggerContainer>
+              <StaggerContainer className="space-y-6">
+                <StaggerItem>
+                  <div>
+                    <label className="block font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
+                      Kendaraan
+                    </label>
+                    <input
+                      type="text"
+                      className="mt-2 w-full border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-all focus:border-primary focus:bg-primary/5"
+                      placeholder="Merk, model, dan tahun"
+                    />
+                  </div>
+                </StaggerItem>
+                <StaggerItem>
+                  <div>
+                    <label className="block font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
+                      Layanan
+                    </label>
+                    <select className="mt-2 w-full border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-all focus:border-primary focus:bg-primary/5">
+                      <option>Perawatan Umum</option>
+                      <option>Tuning Performa</option>
+                      <option>Diagnostik Lanjutan</option>
+                      <option>Konsultasi</option>
+                    </select>
+                  </div>
+                </StaggerItem>
+                <StaggerItem>
+                  <div>
+                    <label className="block font-heading text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
+                      Pesan
+                    </label>
+                    <textarea
+                      rows={4}
+                      className="mt-2 w-full resize-none border-b-2 border-surface-container-highest bg-transparent py-2 font-body text-sm text-on-surface outline-none transition-all focus:border-primary focus:bg-primary/5"
+                      placeholder="Deskripsikan kebutuhan Anda..."
+                    />
+                  </div>
+                </StaggerItem>
+              </StaggerContainer>
               <button
                 type="submit"
                 className="w-full bg-primary py-3 font-heading text-sm font-semibold uppercase tracking-widest text-on-primary transition-colors hover:bg-primary-container"
