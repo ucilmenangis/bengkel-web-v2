@@ -10,7 +10,7 @@ export default function ProductCard({
   onSelect: (product: Product) => void;
 }) {
   return (
-    <div className="bg-surface-container-lowest group">
+    <div className="border border-surface-container-highest bg-surface-container-lowest group">
       {/* Product image with Spec HUD */}
       <div className="relative overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
